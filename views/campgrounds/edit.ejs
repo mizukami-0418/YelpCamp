@@ -2,7 +2,7 @@
 <div class="row">
   <h1 class="text-center">キャンプ場編集</h1>
   <div class="offset-3 col-6">
-    <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+    <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST" novalidate class="validate-form">
       <div class="mb-3">
         <label class="form-label" for="title">タイトル</label>
         <input
@@ -11,7 +11,11 @@
           name="campground[title]"
           id="title"
           value="<%= campground.title %>"
+          required
         />
+        <div class="valid-feedback">
+          OK牧場!!!!
+        </div>
       </div>
       <div class="mb-3">
         <label class="form-label" for="location">場所</label>
@@ -21,7 +25,11 @@
           name="campground[location]"
           id="location"
           value="<%= campground.location %>"
+          required
         />
+        <div class="valid-feedback">
+          OK牧場!!!!
+        </div>
       </div>
       <div class="mb-3">
         <label class="form-label" for="image">画像URL</label>
@@ -31,7 +39,11 @@
           name="campground[image]"
           id="image"
           value="<%= campground.image %>"
+          required
         />
+        <div class="valid-feedback">
+          OK牧場!!!!
+        </div>
       </div>
       <div class="mb-3">
         <label class="form-label" for="price">価格</label>
@@ -39,7 +51,11 @@
           <span class="input-group-text" id="price-label">¥</span>
           <input type="text" class="form-control" id="price" placeholder="0"
             aria-label="価格" aria-describedby="price-label"
-            name="campground[price]" value="<%= campground.price %>">
+            name="campground[price]" value="<%= campground.price %>"
+            required>
+          <div class="valid-feedback">
+            OK牧場!!!!
+          </div>
         </div>
       </div>
       <div class="mb-3">
@@ -49,7 +65,11 @@
           type="text"
           name="campground[description]"
           id="description"
+          required
         /><%= campground.description %></textarea>
+        <div class="valid-feedback">
+          OK牧場!!!!
+        </div>
       </div>
       <div class="mb-3"><button class="btn btn-info">更新</button></div>
     </form>
