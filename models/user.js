@@ -19,7 +19,7 @@ userSchema.plugin(passportLocalMongoose, {
     TooManyAttemptsError: "アカウントをロックしました",
     NoSaltValueStoredError: "認証ができませんでした",
     IncorrectPasswordError: "ユーザー名またはパスワードが間違っています",
-    IncorrectUseError: "ユーザー名またはパスワードが間違っています",
+    IncorrectUsernameError: "ユーザー名またはパスワードが間違っています",
     MissingUsernameError: "そのユーザーは存在しません",
   },
 });
